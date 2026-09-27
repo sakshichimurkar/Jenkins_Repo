@@ -10,6 +10,7 @@ pipeline {
 
         stage('Test') {
             steps {
+                withEnv(['PATH+NODE=/opt/homebrew/bin'])
                 sh 'npm test'
             }
         }
